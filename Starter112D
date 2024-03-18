@@ -1,1 +1,165 @@
+  Q.1
+/* package codechef; // don't place package name! */
 
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t-->0){
+		    int n=sc.nextInt();
+		    int k=sc.nextInt();
+		    int reimb=n/(k+1);
+		    System.out.println(n-reimb*k);
+		    
+		    
+		}
+	}
+}
+
+Q.2
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t-->0){
+		    int n=sc.nextInt();  //the number of logistics
+		    String s=sc.next();  //string of length n i.e the number of logicians
+		    String answur="";
+		    int oc=0;
+		    int zcc=0;
+		    for(int i=0;i<n;i++){
+		        char ck=s.charAt(i);
+		        if(ck=='1'){
+		            oc++;
+		            if(i==n-1){
+		                if(zcc>0){
+		                    System.out.println("NO");
+		                }
+		                else{
+		                    System.out.println("YES");
+		                }
+		            }
+		            else{
+		                if(zcc>0)
+		                    System.out.println("NO");
+		                
+		                else
+		                    System.out.println("IDK");
+		                
+		                
+		            }
+		            }else{
+		                zcc++;
+		                System.out.println("NO");
+		            }
+		            
+		        }
+		    }
+		    
+		}
+	
+	}
+
+Q.3
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+    public static void main(String[] args) throws java.lang.Exception
+    {
+        // your code goes here
+        Scanner sc = new Scanner(System.in);
+
+        int t = sc.nextInt();
+
+        while (t > 0) {
+
+            List < Integer > ks = new ArrayList < > ();
+
+            int n = sc.nextInt();
+            HashMap < Integer, Integer > p = new HashMap < > ();
+            //creating a hashmap to store the different values of the fruits
+
+            int pytk[] = new int[n];
+            //creating an array to take entry of different type of fruits
+            for (int i = 0; i < n; i++) {
+
+                int vl = sc.nextInt();
+                pytk[i] = vl;
+            }
+
+            int nutrition[] = new int[n];
+
+            for (int i = 0; i < n; i++) {
+
+                int vl = sc.nextInt();
+                int pyt = pytk[i];
+                //taking entry of different types of nutrition value of the fruits
+                if (p.get(pyt) == null) {
+                    ks.add(pyt);
+                    p.put(pyt, vl);
+                }
+                else {
+                    int pk = p.get(pyt);
+                    if (vl > pk) {
+                        p.put(pyt, vl);
+                    }
+                }
+            }
+
+            int answer = 0;
+
+            for (int i = 0; i < ks.size(); i++) {
+
+                int gopii = p.get(ks.get(i));
+                if (gopii > 0)
+                    answer += gopii;
+            }
+            System.out.println(answer);
+            t--;
+        }
+    }
+}
+
+
+Q(4)
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int x=sc.nextInt();
+		int y=sc.nextInt();
+		System.out.println(6*x+y);
+	}
+}
